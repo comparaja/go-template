@@ -7,3 +7,9 @@ type Todo struct {
 	Title     string    `json:"title"`
 	CreatedAt time.Time `json:"created_at"`
 }
+
+func (t *Todo) ChangeTitle(title string) error {
+	t.Title = title
+
+	return nil
+}
